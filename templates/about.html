@@ -1,6 +1,26 @@
-{% extends "layout.html" %}
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT US</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+</head>
+
+<body>
+<header>
+    <nav>
+        <a href="/" class="links">🏠HOME</a>
+        <a href="/about" target="_blank" class="links">📜ABOUT</a>
+        <a href="/contact" target="_blank" class="links">☎️CONTACT US</a>
+        <a href="https://inayatrumi.tiiny.site" target="_blank" class="links">🧑🏻PORTFOLIO</a>
+    </nav>
+</header>
   
     <div class="about-container">
         <h1>About Us</h1>
@@ -28,4 +48,10 @@
         <h2>Contact Us</h2>
         <p>If you have any questions or feedback, feel free to reach out to us via the <a href="/contact">Contact Us</a> page.</p>
     </div>
-    {% endblock %}
+   
+    <div class="footer">
+        <p>Powered By <a href="https://weatherapi.com">Weatherapi.com</a></p>
+    </div>
+
+</body>
+</html>
