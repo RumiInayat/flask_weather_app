@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+</head>
+
+<body>
+<header>
+    <nav>
+        <a href="/" class="links">🏠HOME</a>
+        <a href="/about" target="_blank" class="links">📜ABOUT</a>
+        <a href="/contact" target="_blank" class="links">☎️CONTACT US</a>
+        <a href="https://inayatrumi.tiiny.site" target="_blank" class="links">🧑🏻PORTFOLIO</a>
+    </nav>
+</header>
+
+
+
+
+    <div class="loader" id="loader"></div>
+
+
+    <form  class="form" method="POST" action="/">
+
+        <input type="text" name="city" placeholder="Enter City Name eg(Chitral)">
+        <input type="submit" name="submit" value="Search">
+    </form>
+
+    <div class="weather_details">
+        {% if show_data %}
+        <h2>Weather in {{city}}</h2>
+        <p>Country: {{country}}</p>
+        <p>Region: {{region}}</p>
+        <p>Temperature: {{temp_c}}°C / {{temp_f}}°F </p>
+        <p>Humidity: {{humidity}}%</p>
+        <p>Condition: {{condition}}</p>
+        <p>Wind: {{wind}}kph</p>
+        <p style="display: flex; text-align: center; justify-content: center;">Clouds: {{cloud}}% <img width="50px" src="{{icon}}"></p>
+
+        {% endif %}
+
+        {% if not show_data %}
+        <p>Weather INFO Goes Here...</p>
+        {%endif%}
+
+        {% if city_error %}
+        <p>{{error}}</p>
+        {%endif%}
+
+    </div>
+
+
+   
+    </div>
+</div>
+
+   
+
+
+
+
+
+
+
+
+<div class="footer">
+    <p>Powered By <a href="https://weatherapi.com">weatherapi.com</a></p>
+</div>
+
+
+
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function () {
+            document.getElementById('loader').classList.add('active');
+        });
+    </script>
+
+</body>
+
+</html>

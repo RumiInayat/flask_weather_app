@@ -1,0 +1,9 @@
+{
+    "details":
+    {
+        "api_key":"34a65e95d9a443f99c543533251205",
+        "url":"http://api.weatherapi.com/v1/current.json?key=",
+        "forecast":"http//api.weatherapi.com/v1/forecast.json?key="
+        
+    }
+}
