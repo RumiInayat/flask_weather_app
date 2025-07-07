@@ -25,6 +25,7 @@ def home():
         
             country = weather_data['location']['country']
             region = weather_data['location']['region']
+            last_updated = weather_data['current']['last_updated']
             temp_c = weather_data['current']['temp_c']
             temp_f = weather_data['current']['temp_f']
             condition = weather_data['current']['condition']['text']
@@ -39,7 +40,7 @@ def home():
             return render_template('index.html',error="Invalid City, Please Check City Name.", city_error=True)
        
 
-        return render_template('index.html', temp_c=temp_c,temp_f=temp_f, condition=condition, region=region ,city=city, country=country,humidity=humidity, cloud=cloud, wind=wind,   icon=icon, show_data=True)
+        return render_template('index.html', temp_c=temp_c,temp_f=temp_f, condition=condition, region=region ,city=city, country=country,humidity=humidity, cloud=cloud, wind=wind, last_updated= last_updated, icon=icon, show_data=True)
     
     return render_template('index.html',  show_data=False)
 
