@@ -10,21 +10,18 @@
 </head>
 
 <body>
-<header>
-    <nav>
-        <a href="/" class="links">🏠HOME</a>
-        <a href="/about" target="_blank" class="links">📜ABOUT</a>
-        <a href="/contact" target="_blank" class="links">☎️CONTACT US</a>
-    </nav>
-</header>
-
-
-
+    <header>
+        <nav>
+            <a href="/" class="links">🏠HOME</a>
+            <a href="/about" target="_blank" class="links">📜ABOUT</a>
+            <a href="/contact" target="_blank" class="links">☎️CONTACT US</a>
+        </nav>
+    </header>
 
     <div class="loader" id="loader"></div>
 
 
-    <form  class="form" method="POST" action="/">
+    <form class="form" method="POST" action="/">
 
         <input type="text" name="city" placeholder="Enter City Name eg(Chitral)">
         <input type="submit" name="submit" value="Search">
@@ -38,9 +35,10 @@
         <p>Region: {{region}}</p>
         <p>Temperature: {{temp_c}}°C / {{temp_f}}°F </p>
         <p>Humidity: {{humidity}}%</p>
-        <p style="display: flex; flex-direction: column; align-items: center; justify-content: center;">Condition: {{condition}} <img width="50px" src="{{icon}}"></p>
+        <p style="display: flex; flex-direction: column; align-items: center; justify-content: center;">Condition:
+            {{condition}} <img width="50px" src="{{icon}}"></p>
         <p>Wind: {{wind}}kph</p>
-       <p>Clouds: {{cloud}}% </p>
+        <p>Clouds: {{cloud}}% </p>
 
         {% endif %}
 
@@ -54,26 +52,13 @@
 
     </div>
 
-
-   
     </div>
-</div>
-
-   
+    </div>
 
 
-
-
-
-
-
-
-<div class="footer">
-    <p>Powered By <a href="https://weatherapi.com">weatherapi.com</a></p>
-</div>
-
-
-
+    <div class="footer">
+        <p>Powered By <a href="https://weatherapi.com">weatherapi.com</a></p>
+    </div>
 
     <script>
         document.querySelector('form').addEventListener('submit', function () {
@@ -81,8 +66,7 @@
         });
     </script>
 
-
-<script src="//code.tidio.co/6irrthokcareq2aauozmr35fdxadt12a.js" async></script>
+    <script src="//code.tidio.co/6irrthokcareq2aauozmr35fdxadt12a.js" async></script>
 </body>
 
 </html>
