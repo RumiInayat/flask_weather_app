@@ -37,9 +37,10 @@
         <p>Region: {{region}}</p>
         <p>Temperature: {{temp_c}}°C / {{temp_f}}°F </p>
         <p>Humidity: {{humidity}}%</p>
-        <p>Condition: {{condition}}</p>
+        <p style="display: flex; align-items: center; justify-content: center;">Condition: {{condition}} <img width="50px" src="{{icon}}"></p>
+        <p>
         <p>Wind: {{wind}}kph</p>
-        <p style="display: flex; text-align: center; justify-content: center;">Clouds: {{cloud}}% <img width="50px" src="{{icon}}"></p>
+       <p>Clouds: {{cloud}}% </p>
 
         {% endif %}
 
